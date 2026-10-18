@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watchlog</title>
+<meta name="description" content="Track movies and series, see where to watch them, and keep your own watchlist.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232f4fd8'/%3E%3Cpath d='M9 10h14v3H9zm0 5h14v3H9zm0 5h9v3H9z' fill='white'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Instrument+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="#/" aria-label="Watchlog home"><span class="mark" aria-hidden="true"></span>Watchlog</a>
+  <nav class="nav" aria-label="Main">
+    <a href="#/" data-nav="">Discover</a>
+    <a href="#/list" data-nav="list">My list</a>
+  </nav>
+  <form class="search" role="search" id="searchform">
+    <label class="sr" for="q">Search movies and series</label>
+    <input id="q" type="search" placeholder="Search movies and series" autocomplete="off">
+  </form>
+  <label class="region">
+    <span class="sr">Country for streaming info</span>
+    <select id="region" aria-label="Country for streaming info"></select>
+  </label>
+</header>
+
+<main id="app" tabindex="-1"><p class="muted">Loading…</p></main>
+
+<footer class="foot">
+  <!-- TMDB asks you to show their logo here too. See the README, step "Before you share it". -->
+  <p>This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+  <p>Streaming availability data is provided by JustWatch through TMDB.</p>
+</footer>
+
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
